@@ -1,0 +1,113 @@
+/* --- Mobile Responsive 2025 --- */
+
+@media (max-width: 900px) {
+
+    /* Layout Reset */
+    .sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        top: auto;
+        height: auto;
+        border-radius: 0;
+        border: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 0.5rem 1rem;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(20px);
+        z-index: 1000;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 1rem;
+        padding-bottom: 6rem;
+        width: 100%;
+    }
+
+    /* Navigation Turn into Tabs */
+    .logo {
+        display: none;
+    }
+
+    /* Hide logo in bottom tab bar */
+
+    .nav-links {
+        flex-direction: row;
+        gap: 0;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        gap: 0.2rem;
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        text-align: center;
+        border: none;
+        border-radius: 8px;
+    }
+
+    .nav-link svg {
+        width: 24px;
+        height: 24px;
+        margin: 0 auto;
+    }
+
+    .nav-link.active {
+        background: transparent;
+        color: var(--primary);
+        box-shadow: none;
+    }
+
+    .nav-link.active::before {
+        display: none;
+    }
+
+    /* Remove left border indicator */
+
+    /* Typography */
+    h1 {
+        font-size: 2rem;
+    }
+
+    /* Grids */
+    .report-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        /* 2 col on mobile */
+        gap: 1rem;
+    }
+
+    /* Components */
+    .chat-container {
+        height: 500px;
+    }
+
+    .file-upload-label {
+        padding: 2rem 1rem;
+    }
+
+    /* Tables */
+    th,
+    td {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+        /* Stack on very small */
+    }
+}
